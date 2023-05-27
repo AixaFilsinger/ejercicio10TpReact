@@ -1,0 +1,14 @@
+#root{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #FAD961;
+    background-image: linear-gradient(0deg, #FAD961 0%, #F76B1C 20%, #ff0000 49%, #a30606 92%);
+
+}
+main{
+    flex-grow: 1;
+}
+footer{
+    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+}

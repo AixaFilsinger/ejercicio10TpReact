@@ -1,18 +1,17 @@
-import { Container, Card } from "react-bootstrap";
+import { Col, Card } from "react-bootstrap";
 
-const CardForm = () => {
+const CardForm = ({ pelicula }) => {
   return (
-    <Container>
+    <Col xs={12} md={4} className="mb-3">
       <Card>
-        <Card.Img variant="top" src="holder.js/100px180" className="h-100"/>
+        <Card.Img variant="top" src={pelicula.imagen} className="h-100" />
         <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-          </Card.Text>
+          <Card.Title className="fw-semibold text-center fs-1">{pelicula.nombre}</Card.Title>
+          <Card.Text className="fw-semibold fs-5">Genero:{pelicula.genero}</Card.Text>
+          <Card.Text>{pelicula.descripcion}</Card.Text>
         </Card.Body>
       </Card>
-    </Container>
+    </Col>
   );
 };
 
