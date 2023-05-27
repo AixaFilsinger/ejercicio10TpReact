@@ -1,4 +1,5 @@
 import { Container, Form, Button } from "react-bootstrap";
+import ContenedorCard from "./ContenedorCard";
 
 const Formulario = () => {
   return (
@@ -6,11 +7,15 @@ const Formulario = () => {
       <Form>
         <Form.Group className="mb-3" controlId="nom">
           <Form.Label>Nombre</Form.Label>
-          <Form.Control type="email" placeholder="Ej Macarena" />
+          <Form.Control type="text" placeholder="Ej Macarena" />
         </Form.Group>
         <Form.Group className="mb-3" controlId="txt-descripcion">
           <Form.Label>Descripción</Form.Label>
           <Form.Control as="textarea" rows={3} />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="imagen">
+          <Form.Label>Imagen</Form.Label>
+          <Form.Control type="text" placeholder="Ej https://cdn-icons-png.flaticon.com/512/678/678100.png" />
         </Form.Group>
         <Form.Group className="mb-3" controlId="selec-genero">
           <Form.Select aria-label="opciones">
@@ -24,6 +29,7 @@ const Formulario = () => {
           Enviar
         </Button>
       </Form>
+      <ContenedorCard></ContenedorCard>
     </Container>
   );
 };
